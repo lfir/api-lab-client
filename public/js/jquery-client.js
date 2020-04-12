@@ -9,7 +9,7 @@ $(document).ready(function() {
             if (ip) {
                 data.ip = ip;
             }
-            console.log(data);
+            //console.log(data);
             $.post(url, data);
         });
     }
