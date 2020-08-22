@@ -1,14 +1,14 @@
 'use strict';
 
 // Register a page visit event.
-let host = window.location.hostname;
-let path = window.location.pathname;
+const host = window.location.hostname;
+const path = window.location.pathname;
 if (host && path) sendPageVisitInfo();
 
 function sendPageVisitInfo() {
-  let apiUrl = 'https://l086.herokuapp.com/api/newpageview';
-  let data = { host: host, path: path };
-  let postOptions = { method: 'POST', headers: {'Content-Type': 'application/json'} };
+  const apiUrl = 'https://l086.herokuapp.com/api/newpageview';
+  const data = { host: host, path: path };
+  const postOptions = { method: 'POST', headers: {'Content-Type': 'application/json'} };
 
   fetch('https://ifconfig.me/ip')
     .then(response => response.text())
