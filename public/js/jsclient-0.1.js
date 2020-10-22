@@ -10,7 +10,7 @@ function sendPageVisitInfo() {
   const data = { host: host, path: path };
   const postOptions = { method: 'POST', headers: {'Content-Type': 'application/json'} };
 
-  fetch('https://ifconfig.me/ip', { mode: 'no-cors' })
+  fetch('https://ifconfig.me/ip', { mode: 'cors' })
     .then(response => response.text())
     .then(ip => {
       if (ip) data.ip = ip; 
